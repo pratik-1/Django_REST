@@ -1,7 +1,12 @@
 # Django REST Framework APIs
 
-Accounts
+Accounts:
 * Register
 * Login
 * Logout
 * LogoutAll
+* Change Password
+* Password Rest
+
+Customers:
+* Add New Customers
