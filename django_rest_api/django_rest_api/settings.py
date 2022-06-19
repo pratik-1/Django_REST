@@ -38,10 +38,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts',
+
+    # register, login, logout
     'rest_framework',
     'knox',
-    # 'django_rest_passwordreset',
+    'django_rest_passwordreset',
+
+    # Custom applications
+    'accounts',
+    'customers'
+
 ]
 
 MIDDLEWARE = [
@@ -132,3 +138,5 @@ REST_FRAMEWORK = {
         'knox.auth.TokenAuthentication',
     ]
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
