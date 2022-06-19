@@ -2,7 +2,8 @@
 	"info": {
 		"_postman_id": "e6810da9-01cb-4dcf-a8e7-dbbf3d24734d",
 		"name": "Accounts",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20175975"
 	},
 	"item": [
 		{
@@ -63,7 +64,7 @@
 						},
 						{
 							"key": "password",
-							"value": "Password@123",
+							"value": "Password#123",
 							"type": "text"
 						}
 					]
@@ -124,7 +125,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token 9f5f277050499086dd7497d4baf848e081c87495572f6714dcdfbec87d587d00",
+						"value": "Token 5796394f5cb452240371a42d44647a0bbc0a2a3a2b74ee9e8201d077a4c5303c",
 						"type": "text"
 					}
 				],
@@ -141,6 +142,125 @@
 					"path": [
 						"api",
 						"logoutall",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangePassword REST API",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 129dea4486235d175a3ad421f9a212088dbf98e5278856f1b21a7fa1d3138929",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "old_password",
+							"value": "Password@123",
+							"type": "text"
+						},
+						{
+							"key": "new_password",
+							"value": "Password@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/change-password/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"change-password",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PasswordReset using Email REST API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@email.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/password_reset/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"password_reset",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PasswordResetConfirm REST API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "e99c5b202da",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password#123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/password_reset/confirm/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"password_reset",
+						"confirm",
 						""
 					]
 				}
