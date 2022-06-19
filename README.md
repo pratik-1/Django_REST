@@ -6,7 +6,7 @@ Accounts:
 * Logout
 * LogoutAll
 * Change Password
-* Password Rest
+* Password Reset
 
 Customers:
 * Add New Customers
