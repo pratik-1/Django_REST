@@ -9,4 +9,4 @@ Accounts:
 * Password Reset
 
 Customers:
-* Add New Customers
+* CRUD operations on Customers
